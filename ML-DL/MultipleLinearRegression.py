@@ -33,7 +33,7 @@ def gradient_compute(X, y, w, b):
         dj_db += err
     return dj_dw / m, dj_db / m
 
-def gradient_descent(X, y, w, b, alpha, num_iters, compute_cost_, gradient_compute): #bi ara adam algorithm'e çevir
+def gradient_descent(X, y, w, b, alpha, num_iters, compute_cost_, gradient_compute): 
     J_history = []
     lmd = 0
     m = len(X)
@@ -72,4 +72,5 @@ def predict_raw(x_row):
 x_example = np.array([1200, 3, 1, 40], dtype=float)
 print(f"ŷ(x_example) = {predict_raw(x_example):.2f}")
 J_final = compute_cost(X_norm, y_norm, w_z, b_z)
+
 print("Final cost (normalized space):", J_final)
